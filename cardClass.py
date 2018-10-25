@@ -19,3 +19,11 @@ class Card:
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
+            
+def club(circlex, circley, size):
+    pygame.draw.polygon(screen, BLACK, ((200, 100), (450, 100), (450, 400), (200, 400)), 2) # draws border
+    pygame.draw.ellipse(screen, BLACK, ((circlex, circley), (size, size)), 0)
+    pygame.draw.ellipse(screen, BLACK, ((circlex - 25, circley + 45), (size, size)), 0)
+    pygame.draw.ellipse(screen, BLACK, ((circlex + 25, circley + 45), (size, size)), 0)
+    pygame.draw.polygon(screen, BLACK, ((circlex + 25, circley + 75), (circlex, circley + 125), (circlex + 60, circley + 125)), 0)
+club(300, 175, 60)
